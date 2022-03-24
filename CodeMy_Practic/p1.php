@@ -1,17 +1,12 @@
 <?php
-if(!empty($_REQUEST)) {
-if(
-count($_REQUEST) == 3 and
-(isset($_REQUEST[1]) and strlen($_REQUEST[1]) > 0) and
-(isset($_REQUEST[2]) and strlen($_REQUEST[2]) > 0) and
-(isset($_REQUEST[3]) and strlen($_REQUEST[3]) > 0)
-) {
-sort($_REQUEST);
-if(pow($_REQUEST[2], 2) == (pow($_REQUEST[0], 2)) + pow($_REQUEST[1], 2)) {
-echo implode(', ', $_REQUEST)." Числа - тройка Пифагора";
-}
-else echo "Числа: ".implode(', ', $_REQUEST)." не тройка Пифагора";
-}
-else echo "Поля пусты. Введите числа";
+if (isset($_REQUEST['dr'])) {
+    $yourday = explode('.', $_REQUEST['dr']);
+    $now = time();
+    $dr = mktime(23, 59, 59, $yourday[1], $yourday[0]) + 1;
+    if ($dr > $now) {
+        echo floor(($dr - $now) / 60 / 60 / 24) . ' Dней осталось ';
+    } else {
+        echo floor(($dr - $now + 60 * 60 * 24 * 365) / 60 / 60 / 24) . ' Dней осталось ';
+    }
 }
 ?>
