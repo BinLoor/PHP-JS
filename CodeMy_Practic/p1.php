@@ -1,8 +1,8 @@
 <?php
-	header('Context-Type: text/html; charset=utf-8');	
-	$a = $_POST['vvod']; 
-	$fact = 1; 
-	for ($i = 1; $i <= $a; $i++)
-	{$fact *= $i;}
-	echo $fact;
+    $a = $_REQUEST['vvod'];
+    for($i = 1; $i <= $a; $i++) {
+        if($a % $i == 0) {
+            $arr[] = $i;
+        }}
+        echo "Делители числа ".$a.": ".implode(', ', $arr);
 ?>
