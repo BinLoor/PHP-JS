@@ -1,11 +1,8 @@
 <?php
 	session_start();
-	if(!isset($_SESSION['counter'])) {
-		$_SESSION['counter'] = 0; 
-	}
-	else {
-		$_SESSION['counter'] ++ ;
-	}
+	if(!isset($_SESSION['username'])) {
+		header('location: login.php');
+	}	
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +13,6 @@
 		<title>SS</title>
 	</head> 
 <body>
-    <?php 
-	echo $_SESSION['counter']; 
-	?>
+    <h1>Привет, <a href='profile.php'><?php echo $_SESSION['username']; ?></a></h1>
 </body>
 </html>
