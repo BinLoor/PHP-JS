@@ -1,12 +1,9 @@
 <?php
-if (isset($_REQUEST['dr'])) {
-    $yourday = explode('.', $_REQUEST['dr']);
-    $now = time();
-    $dr = mktime(23, 59, 59, $yourday[1], $yourday[0]) + 1;
-    if ($dr > $now) {
-        echo floor(($dr - $now) / 60 / 60 / 24) . ' Dней осталось ';
-    } else {
-        echo floor(($dr - $now + 60 * 60 * 24 * 365) / 60 / 60 / 24) . ' Dней осталось ';
-    }
+if (!empty($_REQUEST['text'])) {
+    $str = $_REQUEST['text'];
+    $stroka = mb_strlen($str, 'utf-8');
+    $word = count(explode(' ', $str));
+    $space = $word - 1;
+    echo 'Здесь '.$space. ' пробелов, '.$word.' слов, '.$stroka.' символов.';
 }
 ?>
