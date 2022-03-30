@@ -38,6 +38,7 @@ class User {
 	public function show() {
 		echo '<h3> Имя: '.$this->name.'</h3>';
 		echo '<h3> Логин: '.$this->login.'</h3>';
+		echo '<a href="logout.php">Выйти</a>'; 
 	}
 }
 ?>
