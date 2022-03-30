@@ -15,4 +15,10 @@ input {
 	box-shadow: 5px 5px 5px gray;
 	margin-top: 30px;
 	padding:5px;
-}
+} 
+form{
+	position: absolute;
+	top: 40%;
+  	left: 40%;
+	border: 1px solid black;
+} 
