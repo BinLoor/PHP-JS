@@ -10,6 +10,6 @@ class Discipline {
 	public function display() {
 		echo sprintf('%s<br>', $this->title);
 	}
-	}
+}
 
 ?>
