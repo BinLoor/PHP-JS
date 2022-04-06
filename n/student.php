@@ -7,6 +7,7 @@ class Student extends Human {
 	public function __construct($n,$s,$p,$g) {
 		parent::__construct($n,$s,$p);
 		$this->group = $g;
+		$this->group->AddStudent($this);
 	}
 	public function display() {
 		parent::display();
