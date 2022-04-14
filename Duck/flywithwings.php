@@ -2,7 +2,7 @@
 require_once 'flybehaviour.php';
 class FlyWithWings implements FlyBehavior {
 	public function fly() {
-		echo 'Утка летит :-) <br>';
+		echo 'Утка летает :-) <br>';
 	}
 }
 ?>

@@ -3,6 +3,7 @@ require_once 'mallardduck.php';
 require_once 'redheadduck.php';
 require_once 'rubberduck.php';
 require_once 'decoyduck.php';
+require_once 'modelduck.php';
 
 $duck1 = new MallardDuck();
 $duck1->display();
@@ -31,4 +32,14 @@ $duck4->performQuack();
 $duck4->performFly();
 $duck4->swim();
 echo '<hr><br>';
+
+$duck5 = new ModelDuck();
+$duck5->display();
+$duck5->performQuack();
+$duck5->performFly();
+$duck5->setFlyBehavior(new FlyRocket());
+$duck5->performFly();
+$duck5->swim();
+echo '<hr><br>';
+
 ?>
