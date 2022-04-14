@@ -2,7 +2,7 @@
 require_once 'duck.php';
 require_once 'quack.php';
 require_once 'flywithwings.php';
-class MallardDuck extends Duck {
+class RedHeadDuck extends Duck {
 	
 	public function __construct() {
 		$this->quackBehavior = new Quackk();
@@ -10,7 +10,7 @@ class MallardDuck extends Duck {
 	}
 	
 	public function display() {
-		echo 'Я утка-кряква (Mallard Duck)<br>';
+		echo 'Я рыжая утка (Red Head Duck)<br>';
 	}
 }
 ?>
