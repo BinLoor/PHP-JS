@@ -7,5 +7,6 @@
 		new Route('/privet/', 'test', 'act1'),
 		new Route('/poka/', 'test', 'act2'),
 		new Route('/kak/', 'test', 'act3'),
+		new Route('/nums/:n1/:n2/:n3/', 'num', 'sum'),
 	];
 ?>
