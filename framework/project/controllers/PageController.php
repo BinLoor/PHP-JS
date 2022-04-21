@@ -1,17 +1,12 @@
 <?php
 	namespace Project\Controllers;
-	use \Core\Controller;
+	use Core\Controller;
 	
 	class PageController extends Controller
 	{
-		public function show1()
+		public function act()
 		{
-			echo '1';
-		}
-		
-		public function show2()
-		{
-			echo '2';
+			return $this->render('page/act');
 		}
 	}
 ?>
