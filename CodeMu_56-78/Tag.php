@@ -19,5 +19,19 @@
 			$name = $this->name;
 			return "</$name>";
 		}
+		private function getAttrsStr($attrs)
+	{
+		if (!empty($attrs)) {
+			$result = '';
+			
+			foreach ($attrs as $name => $value) {
+				$result .= " $name=\"$value\"";
+			}
+			
+			return $result;
+		} else {
+			return '';
+		}
+	}
 	}
 ?>
