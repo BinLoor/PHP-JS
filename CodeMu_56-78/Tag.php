@@ -26,7 +26,11 @@
 			$result = '';
 			
 			foreach ($attrs as $name => $value) {
-				$result .= " $name=\"$value\"";
+				if ($value === true) {
+					$result .= " $name"; 
+				} else {
+					$result .= " $name=\"$value\""; 
+				}
 			}
 			
 			return $result;
