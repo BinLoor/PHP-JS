@@ -93,5 +93,22 @@
 		
 		return $this;
 	}
+	
+	public function getName()
+	{
+		return $this->name;
+	}
+	public function getText()
+	{
+		return $this->text;
+	}
+	public function getAttrs()
+	{
+		return $this->attrs;
+	}
+	public function getAttr($attr)
+	{
+		return $this->attrs[$attr];
+	}
 } 
 ?>
