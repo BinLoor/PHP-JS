@@ -1,5 +1,4 @@
 <?php
 	require_once 'Link.php';
-	require_once 'menu.php';
-	echo $link1. ' '. $link2.' ' . $link3. ' '. $link4. ' '. $link5."<br>";
+	echo (new Link)->setAttr('href', '/Projects/CodeMu_56-78/index.php')->setText('index')->show();
 ?>
