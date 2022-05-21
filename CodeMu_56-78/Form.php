@@ -6,5 +6,6 @@ require_once 'Tag.php';
 		{
 			parent::__construct('form');
 		}
+		
 	}
 ?>
