@@ -23,7 +23,7 @@ require_once 'ListItem.php';
 			
 			return $result;
 		}
-		public function __toString()
+		public function __toString() //Задача 70.2
 		{
 			return $this->show();
 		} 
